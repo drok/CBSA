@@ -1,6 +1,7 @@
 srcdir=..
 
 FILES = \
+	'post/to.html' \
 	'Evidence/Discovery of Defendant/Discovery Answers v1.pdf' \
 	'2015-08-28 - Statement of Claim/T-1450-15 Statement of Claim.pdf' \
 	'2015-09-29 - Defendant Statement of Defence/T-1450-15 STATEMENT OF DEFENCE.pdf' \
@@ -52,6 +53,13 @@ all:
 		link_file=$${file// /_}; \
 		echo make "___________ $(LINKDIR)/$$link_file" ; \
 		$(MAKE) "$(LINKDIR)/$$link_file" SRC="$(srcdir)/$$file"; \
+	done
+
+checkout:
+	@set -o errexit ; \
+	for file in $(FILES); do \
+		echo "Working on $$file"; \
+		git checkout master -- "$(srcdir)/$$file"; \
 	done
 
 # Replace spaces with underscores in the filenames and create hardlinks

@@ -32,7 +32,7 @@ FILES = \
 	'Evidence/CCRA Contributions/Administrative/P-134 - Requirement for returns by non-resident performers staging events in Canada - November 30, 1993.pdf' \
 	'Evidence/CCRA Contributions/Administrative/P-169 - Meaning of in-respect-of - January 25, 1995.pdf' \
 	'Evidence/CCRA Contributions/Administrative/P-200 - Place of supply of intangible personal property and real property - by Gleeson - January 1, 1996.pdf' \
-	'Evidence/CCRA Contributions/P-212 - Entitlement of visiting forces members - by Gleeson Sep 12, 1997.pdf' \
+	'Evidence/CCRA Contributions/Administrative/P-212 - Entitlement of visiting forces members - by Gleeson Sep 12, 1997.pdf' \
 	'Evidence/Exhibit K - Customs-Enforcement-Manual-2-of-3.pdf' \
 	'Evidence/Exhibit K - Customs-Enforcement-Manual-3-of-3.pdf' \
 	'Evidence/Khaled Nawaya case/Khaled Nawaya BCSC-179965.pdf'
@@ -45,6 +45,7 @@ SHELL=/bin/bash
 # Rule to replace spaces with underscores in the paths
 all:
 	@mkdir -p $(LINKDIR)
+	@set -o errexit ; \
 	set -x ; \
 	for file in $(FILES); do \
 		echo "Working on $$file"; \

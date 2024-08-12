@@ -1,0 +1,141 @@
+# This is a basic workflow to help you get started with Actions
+
+name: Publish as website
+
+# Controls when the action will run. Triggers the workflow on push or pull request
+# events but only for the master branch
+on:
+  push:
+    branches:
+      - publish
+
+  workflow_call:
+    inputs:
+      name:
+        type: string
+        description: 'Artifact name'
+        required: false
+        default: 'github-pages'
+      path:
+        type: string
+        description: "Path of the directory containing the static assets."
+        required: true
+        default: "website/out"
+      retention-days:
+        type: string
+        description: "Duration after which artifact will expire in days."
+        required: false
+        default: "1"
+
+  workflow_dispatch:
+    inputs:
+      name:
+        description: 'Artifact name'
+        required: false
+        default: 'github-pages'
+      path:
+        description: "Path of the directory containing the static assets."
+        required: true
+        default: "website/out"
+      retention-days:
+        description: "Duration after which artifact will expire in days."
+        required: false
+        default: "1"
+
+# A workflow run is made up of one or more jobs that can run sequentially or in parallel
+jobs:
+  # This workflow contains a single job called "build"
+  build:
+    # The type of runner that the job will run on
+    runs-on: ubuntu-latest
+
+    env:
+      INPUT_NAME: ${{ github.event.inputs.name || 'github-pages' }}
+      INPUT_PATH: ${{ github.event.inputs.path || 'website/out' }}
+      INPUT_RETENTION_DAYS: ${{ github.event.inputs['retention-days'] || 1 }}
+
+    # Steps represent a sequence of tasks that will be executed as part of the job
+    steps:
+      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
+      - uses: actions/checkout@v2
+
+    # Runs a single command using the runners shell
+      - name: Build the website
+        run: |
+          make -C website
+
+      - name: Archive artifact
+        shell: sh
+        if: runner.os == 'Linux'
+        run: |
+          echo ::group::Archive Linux artifact
+          tar \
+            --dereference --hard-dereference \
+            --directory "$INPUT_PATH" \
+            -cvf "$RUNNER_TEMP/artifact.tar" \
+            --exclude=.git \
+            --exclude=.github \
+            .
+          echo ::endgroup::
+
+      # Switch to gtar (GNU tar instead of bsdtar which is the default in the MacOS runners so we can use --hard-dereference)
+      - name: Archive artifact
+        shell: sh
+        if: runner.os == 'macOS'
+        run: |
+          echo ::group::Archive MacOS artifact
+          gtar \
+            --dereference --hard-dereference \
+            --directory "$INPUT_PATH" \
+            -cvf "$RUNNER_TEMP/artifact.tar" \
+            --exclude=.git \
+            --exclude=.github \
+            .
+          echo ::endgroup::
+
+      # Massage the paths for Windows only
+      - name: Archive artifact
+        shell: bash
+        if: runner.os == 'Windows'
+        run: |
+          echo ::group::Archive Windows artifact
+          tar \
+            --dereference --hard-dereference \
+            --directory "$INPUT_PATH" \
+            -cvf "$RUNNER_TEMP\artifact.tar" \
+            --exclude=.git \
+            --exclude=.github \
+            --force-local \
+            "."
+          echo ::endgroup::
+
+      - name: Upload artifact
+        id: upload-artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: ${{ env.INPUT_NAME }}
+          path: ${{ runner.temp }}/artifact.tar
+          retention-days: ${{ env.INPUT_RETENTION_DAYS }}
+          if-no-files-found: error
+
+  # Deploy job
+  deploy:
+    # Add a dependency to the build job
+    needs: build
+
+    # Grant GITHUB_TOKEN the permissions required to make a Pages deployment
+    permissions:
+      pages: write      # to deploy to Pages
+      id-token: write   # to verify the deployment originates from an appropriate source
+
+    # Deploy to the github-pages environment
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+
+    # Specify runner + deployment step
+    runs-on: ubuntu-latest
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4 # or specific "vX.X.X" version tag for this action

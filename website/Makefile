@@ -60,7 +60,7 @@ all:
 			continue ; \
 		fi ; \
 		echo ">>>> ________  $(LINKDIR)/$$link_file" ; \
-		$(MAKE) -s "$(LINKDIR)/$$link_file" SRC="$(srcdir)/$$file"; \
+		$(MAKE) --no-print-directory -s "$(LINKDIR)/$$link_file" SRC="$(srcdir)/$$file"; \
 	done
 
 checkout:

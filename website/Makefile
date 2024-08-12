@@ -43,16 +43,24 @@ LINKDIR := out
 
 SHELL=/bin/bash
 
+bucket="cbsa-$(CF_PAGES_BRANCH)"
+
 # Rule to replace spaces with underscores in the paths
+# Files greater than 25MB are stored in R2 public bucket on Cloudflare due to limit
+# https://developers.cloudflare.com/pages/platform/limits/#file-size
 all:
 	@mkdir -p $(LINKDIR)
 	@set -o errexit ; \
-	set -x ; \
 	for file in $(FILES); do \
-		echo "Working on $$file"; \
 		link_file=$${file// /_}; \
-		echo make "___________ $(LINKDIR)/$$link_file" ; \
-		$(MAKE) "$(LINKDIR)/$$link_file" SRC="$(srcdir)/$$file"; \
+		size=$$(stat -c %s "$(srcdir)/$$file"); \
+		if [[ $${CF_PAGES:+isset} ]] && (( size > 25000000 )) ; then \
+			echo ">>>> R2 >>>>> $(LINKDIR)/$$link_file" ; \
+			rclone copy "$(srcdir)/$$file" "$(bucket):$(LINKDIR)/$$link_file"; \
+			continue ; \
+		fi ; \
+		echo ">>>> ________  $(LINKDIR)/$$link_file" ; \
+		$(MAKE) -s "$(LINKDIR)/$$link_file" SRC="$(srcdir)/$$file"; \
 	done
 
 checkout:

@@ -56,7 +56,7 @@ all:
 		size=$$(stat -c %s "$(srcdir)/$$file"); \
 		if [[ $${CF_PAGES:+isset} ]] && (( size > 25000000 )) ; then \
 			echo ">>>> R2 >>>>> $(LINKDIR)/$$link_file" ; \
-			rclone copy "$(srcdir)/$$file" "$(bucket):$(LINKDIR)/$$link_file"; \
+			rclone copy "$(srcdir)/$$file" "$(bucket):$(LINKDIR)/$$link_file" || echo "ERROR: $$link_file skipped because rclone unavailable" ; \
 			continue ; \
 		fi ; \
 		echo ">>>> ________  $(LINKDIR)/$$link_file" ; \

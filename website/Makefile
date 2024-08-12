@@ -25,6 +25,8 @@ FILES = \
 	'2019-08-07 - Appeals Judgments/A-102-18_20190807_R_E_O_OTT_20190807115620_GTR_WBB_RVO_2019_FCA_214-anotated.pdf' \
 	'2019-08-07 - Appeals Judgments/A-102-18_20190807_J_E_O_OTT_20190807111959_GTR_WBB_RVO.pdf' \
 	'2020-06-16 - Recusal Decision/T-1450-15.pdf' \
+	'Evidence/CoinLaunderingDocs.svgz' \
+	'Evidence/CoinLaunderingDocs.svg' \
 	'Evidence/Discovery of Defendant/Discovery Answers v1.pdf' \
 	'Evidence/Discovery of Defendant/Discovery Answers v1-CBSA Precious Metals Memo.pdf' \
 	'Evidence/FINTRAC inquiry re gold/FINTRAC Policy Interpretation Re gold coins inquiry.pdf' \

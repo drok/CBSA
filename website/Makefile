@@ -8,6 +8,7 @@ FILES = \
 	'2015-11-06 - Affidavit of Documents - Defence/T-1450-15_0.pdf' \
 	'2015-11-06 - Affidavit of Documents - Defence/T-1450-15_14 - Nov 19 2014 Kendall receives LePage ruling.pdf' \
 	'2015-11-06 - Affidavit of Documents - Defence/T-1450-15_16 - Dec 11 2014 letter from Kendall.pdf' \
+	'2015-11-06 - Affidavit of Documents - Defence/T-1450-15_38 - synopsys, rescaled.pdf' \
 	'2016-08-30 - Defendant Motion to Dismiss/Aug 30 2016 - Defendant Notice of Motion to dismiss 16945818.pdf' \
 	'2017-02-28 - Motion for Summary Judgement by defendant/T-1450-15 - HociungSummaryJudgementMotion.pdf' \
 	'2017-02-28 - Motion for Summary Judgement by defendant/T-1450-15 Response to Summary Judgement Motion.pdf' \

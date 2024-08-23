@@ -55,7 +55,11 @@ FILES = \
 	'Evidence/Exhibit K - Customs-Enforcement-Manual-3-of-3.pdf' \
 	'Evidence/GST Memo 17.1/Policy Statement P-192 - Supplies of Precious Metals.pdf' \
 	'Evidence/Khaled Nawaya case/Khaled Nawaya BCSC-179965.pdf' \
-	'Evidence/Minister'\''s Decision/DOC012117-006 - decision.pdf'
+	'Evidence/Minister'\''s Decision/DOC012117-006 - decision.pdf' \
+	'Evidence/Ronsco/T-1295-20 Ronsco v. HMQ/2020-10-29 - Doc 1 - Statement of Claim.pdf' \
+	'Evidence/Ronsco/T-1295-20 Ronsco v. HMQ/2021-06-03 - Doc 10 - Fresh Amended Statement of Claim.pdf' \
+	'Evidence/Ronsco/T-1295-20 Ronsco v. HMQ/2021-07-23 - Doc 16 - Defendant Motion to Strike Fresh Amended Claim.pdf' \
+	'Evidence/Ronsco/T-1295-20 Ronsco v. HMQ/2021-08-31 - Doc 19 - Plaintiff Response to Defendant Motion to Strike Fresh.pdf'
 
 # Variables
 LINKDIR := out

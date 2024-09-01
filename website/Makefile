@@ -15,6 +15,7 @@ FILES = \
 	'2015-11-06 - Affidavit of Documents - Defence/T-1450-15_38 - synopsys, rescaled.pdf' \
 	'2016-08-30 - Defendant Motion to Dismiss/Aug 30 2016 - Defendant Notice of Motion to dismiss 16945818.pdf' \
 	'2016-08-30 - Defendant Motion to Dismiss/Court Order/Court order on Costs of Motion to Dismiss - by email.pdf' \
+	'2016-08-30 - Defendant Motion to Dismiss/Court Order/Court order on Motion to Dismiss - 12263368327_20160921_152101.pdf' \
 	'2017-02-28 - Motion for Summary Judgement by defendant/T-1450-15 - HociungSummaryJudgementMotion.pdf' \
 	'2017-02-28 - Motion for Summary Judgement by defendant/T-1450-15 Response to Summary Judgement Motion.pdf' \
 	'2017-02-28 - Motion for Summary Judgement by defendant/PetersonDiscovery.pdf' \
@@ -61,6 +62,13 @@ FILES = \
 	'Evidence/Ronsco/T-1295-20 Ronsco v. HMQ/2021-07-23 - Doc 16 - Defendant Motion to Strike Fresh Amended Claim.pdf' \
 	'Evidence/Ronsco/T-1295-20 Ronsco v. HMQ/2021-08-31 - Doc 19 - Plaintiff Response to Defendant Motion to Strike Fresh.pdf'
 
+# These files are only referenced in research
+
+RESEARCH_FILES = \
+	'Evidence/CCRA Contributions/AMPS mention in commentary Sep 24-26 2001.pdf'
+
+PUBLISH_FILES = $(FILES) $(RESEARCH_FILES)
+
 # Variables
 LINKDIR := out
 
@@ -74,7 +82,7 @@ bucket="cbsa-$(CF_PAGES_BRANCH)"
 all:
 	@mkdir -p $(LINKDIR)
 	@set -o errexit ; \
-	for file in $(FILES); do \
+	for file in $(PUBLISH_FILES); do \
 		link_file=$${file// /_}; \
 		size=$$(stat -c %s "$(srcdir)/$$file"); \
 		if [[ $${CF_PAGES:+isset} ]] && (( size > 25000000 )) ; then \
@@ -88,7 +96,7 @@ all:
 
 checkout:
 	@set -o errexit ; \
-	for file in $(FILES); do \
+	for file in $(PUBLISH_FILES); do \
 		echo "Working on $$file"; \
 		git checkout master -- "$(srcdir)/$$file"; \
 	done

@@ -55,6 +55,7 @@ FILES = \
 	'Evidence/Exhibit K - Customs-Enforcement-Manual-3-of-3.pdf' \
 	'Evidence/FINTRAC inquiry re gold/FINTRAC Policy Interpretation Re gold coins inquiry.pdf' \
 	'Evidence/GST Memo 17.1/Policy Statement P-192 - Supplies of Precious Metals.pdf' \
+	'Evidence/Igloo Vikski/36258_PCSBSA_A-D_Arguments.pdf' \
 	'Evidence/Khaled Nawaya case/Khaled Nawaya BCSC-179965.pdf' \
 	'Evidence/Minister'\''s Decision/DOC012117-006 - decision.pdf' \
 	'Evidence/Ronsco/CITT/2019-10-21 - AP-2019-003-31 - CBSA-Gleeson letter of reclassification to Sumitomo.pdf' \

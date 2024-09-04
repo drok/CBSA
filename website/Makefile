@@ -43,7 +43,6 @@ FILES = \
 	'Evidence/CoinLaunderingDocs.svg' \
 	'Evidence/Discovery of Defendant/Discovery Answers v1.pdf' \
 	'Evidence/Discovery of Defendant/Discovery Answers v1-CBSA Precious Metals Memo.pdf' \
-	'Evidence/FINTRAC inquiry re gold/FINTRAC Policy Interpretation Re gold coins inquiry.pdf' \
 	'Evidence/CCRA Contributions/AMPS first mention EY Sep 22 1997 - question mark.pdf' \
 	'Evidence/CCRA Contributions/GST Foreword.pdf' \
 	'Evidence/CCRA Contributions/GST MEmo 7.5 Electronic Filing and Remitting - April 1997 - compliance record.pdf' \
@@ -54,6 +53,7 @@ FILES = \
 	'Evidence/CCRA Contributions/Administrative/P-212 - Entitlement of visiting forces members - by Gleeson Sep 12, 1997.pdf' \
 	'Evidence/Exhibit K - Customs-Enforcement-Manual-2-of-3.pdf' \
 	'Evidence/Exhibit K - Customs-Enforcement-Manual-3-of-3.pdf' \
+	'Evidence/FINTRAC inquiry re gold/FINTRAC Policy Interpretation Re gold coins inquiry.pdf' \
 	'Evidence/GST Memo 17.1/Policy Statement P-192 - Supplies of Precious Metals.pdf' \
 	'Evidence/Khaled Nawaya case/Khaled Nawaya BCSC-179965.pdf' \
 	'Evidence/Minister'\''s Decision/DOC012117-006 - decision.pdf' \

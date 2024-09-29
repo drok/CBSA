@@ -63,7 +63,13 @@ FILES = \
 	'Evidence/Ronsco/T-1295-20 Ronsco v. HMQ/2021-06-03 - Doc 10 - Fresh Amended Statement of Claim.pdf' \
 	'Evidence/Ronsco/T-1295-20 Ronsco v. HMQ/2021-07-23 - Doc 16 - Defendant Motion to Strike Fresh Amended Claim.pdf' \
 	'Evidence/Ronsco/T-1295-20 Ronsco v. HMQ/2021-08-31 - Doc 19 - Plaintiff Response to Defendant Motion to Strike Fresh.pdf' \
-	'Evidence/Ronsco/T-1295-20 Ronsco v. HMQ/2024-09-02 - Docket file.pdf'
+	'Evidence/Ronsco/T-1295-20 Ronsco v. HMQ/2024-09-02 - Docket file.pdf' \
+	'Evidence/Time Data Recorder International/1993-01-28 - Time Data Recorder Exhibits - T-1707-90 ID15.pdf' \
+	'Evidence/Time Data Recorder International/fenn-hb-and-co-v-minister-of-national-revenue-customs-and-ex.pdf' \
+	'Evidence/Time Data Recorder International/lanctt-raymond-lte-v-canada-1990-35-ftr-96-td-canadian-casel.pdf' \
+	'Evidence/Time Data Recorder International/mattu-v-canada-1991-45-ftr-190-td-canadian-caselaw.pdf' \
+	'Evidence/Time Data Recorder International/roblin-textiles-inc-v-ministre-du-revenu-national-1991-45-ft.pdf'
+
 
 # These files are only referenced in research
 

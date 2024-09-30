@@ -68,7 +68,8 @@ FILES = \
 	'Evidence/Time Data Recorder International/fenn-hb-and-co-v-minister-of-national-revenue-customs-and-ex.pdf' \
 	'Evidence/Time Data Recorder International/lanctt-raymond-lte-v-canada-1990-35-ftr-96-td-canadian-casel.pdf' \
 	'Evidence/Time Data Recorder International/mattu-v-canada-1991-45-ftr-190-td-canadian-caselaw.pdf' \
-	'Evidence/Time Data Recorder International/roblin-textiles-inc-v-ministre-du-revenu-national-1991-45-ft.pdf'
+	'Evidence/Time Data Recorder International/roblin-textiles-inc-v-ministre-du-revenu-national-1991-45-ft.pdf' \
+	'Evidence/Time Data Recorder International/time-data-recorder-international-ltd-et-al-v-minister-of-nat.pdf'
 
 
 # These files are only referenced in research

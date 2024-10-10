@@ -58,6 +58,8 @@ FILES = \
 	'Evidence/Igloo Vikski/36258_PCSBSA_A-D_Arguments.pdf' \
 	'Evidence/Khaled Nawaya case/Khaled Nawaya BCSC-179965.pdf' \
 	'Evidence/Minister'\''s Decision/DOC012117-006 - decision.pdf' \
+	'Evidence/Roblin Textiles/1991-05-25 - Reasons - fr - T-220-88 doc503.pdf' \
+	'Evidence/Roblin Textiles/1991-07-15 - Reasons -en - T-220-88 doc505.pdf' \
 	'Evidence/Ronsco/CITT/2019-10-21 - AP-2019-003-31 - CBSA-Gleeson letter of reclassification to Sumitomo.pdf' \
 	'Evidence/Ronsco/T-1295-20 Ronsco v. HMQ/2020-10-29 - Doc 1 - Statement of Claim.pdf' \
 	'Evidence/Ronsco/T-1295-20 Ronsco v. HMQ/2021-06-03 - Doc 10 - Fresh Amended Statement of Claim.pdf' \
@@ -68,7 +70,6 @@ FILES = \
 	'Evidence/Time Data Recorder International/fenn-hb-and-co-v-minister-of-national-revenue-customs-and-ex.pdf' \
 	'Evidence/Time Data Recorder International/lanctt-raymond-lte-v-canada-1990-35-ftr-96-td-canadian-casel.pdf' \
 	'Evidence/Time Data Recorder International/mattu-v-canada-1991-45-ftr-190-td-canadian-caselaw.pdf' \
-	'Evidence/Time Data Recorder International/roblin-textiles-inc-v-ministre-du-revenu-national-1991-45-ft.pdf' \
 	'Evidence/Time Data Recorder International/time-data-recorder-international-ltd-et-al-v-minister-of-nat.pdf'
 
 

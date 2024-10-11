@@ -67,10 +67,10 @@ FILES = \
 	'Evidence/Ronsco/T-1295-20 Ronsco v. HMQ/2021-08-31 - Doc 19 - Plaintiff Response to Defendant Motion to Strike Fresh.pdf' \
 	'Evidence/Ronsco/T-1295-20 Ronsco v. HMQ/2024-09-02 - Docket file.pdf' \
 	'Evidence/Time Data Recorder International/1993-01-28 - Time Data Recorder Exhibits - T-1707-90 ID15.pdf' \
+	'Evidence/Time Data Recorder International/1993-08-03 - Reasons - T-1707-90 Doc 517 ID 20.pdf' \
 	'Evidence/Time Data Recorder International/fenn-hb-and-co-v-minister-of-national-revenue-customs-and-ex.pdf' \
 	'Evidence/Time Data Recorder International/lanctt-raymond-lte-v-canada-1990-35-ftr-96-td-canadian-casel.pdf' \
-	'Evidence/Time Data Recorder International/mattu-v-canada-1991-45-ftr-190-td-canadian-caselaw.pdf' \
-	'Evidence/Time Data Recorder International/time-data-recorder-international-ltd-et-al-v-minister-of-nat.pdf'
+	'Evidence/Time Data Recorder International/mattu-v-canada-1991-45-ftr-190-td-canadian-caselaw.pdf'
 
 
 # These files are only referenced in research
